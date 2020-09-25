@@ -1,0 +1,216 @@
+// Navbar
+.nav {
+  position: fixed;
+  width: 100%;
+  padding: 1rem 10%;
+  z-index: 1000;
+  box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.1);
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav-logo {
+    width: 120px;
+  }
+
+  .navigation {
+    display: none;
+    font-weight: 600;
+
+    .nav-up {
+      display: flex;
+      justify-content: end;
+      margin-bottom: 1rem;
+      font-size: 0.8rem;
+
+      .up-link:nth-child(1) {
+        margin-right: 1rem;
+      }
+
+      i {
+        color: $primary;
+      }
+    }
+
+    .nav-down {
+      .nav-list {
+        display: flex;
+
+        .link-item {
+          margin-right: 1.5rem;
+          position: relative;
+          display: flex;
+          align-items: center;
+
+          .arrow {
+            height: 10px;
+            margin-left: 5px;
+            transition: all 0.2s ease-in-out;
+          }
+
+          &:hover,
+          &.active {
+            &:after {
+              transform: scaleX(100%);
+            }
+
+            .arrow {
+              transform: rotate(90deg);
+            }
+          }
+
+          &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 3px;
+            background: $primary;
+            transform-origin: center;
+            transition: all 0.2s ease-in-out;
+            transform: scaleX(0);
+            z-index: 1;
+          }
+        }
+
+        .link-item:nth-child(7) {
+          margin-right: 0;
+        }
+
+        .dropdown {
+          position: relative;
+
+          &:hover {
+            .dropdown-menu {
+              opacity: 1;
+              visibility: visible;
+            }
+
+            .link-item {
+              &:after {
+                transform: scaleX(100%);
+              }
+
+              .arrow {
+                transform: rotate(90deg);
+              }
+            }
+          }
+
+          .dropdown-menu {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            top: 25px;
+            padding-top: 20px;
+            background: $white;
+            min-width: 300px;
+            transform: translateX(-30%);
+            font-size: 0.8rem;
+            font-weight: 300;
+            opacity: 0;
+            visibility: hidden;
+
+            .dropdown-menu-item {
+              border-bottom: 1px solid $primary;
+              .dropdown-menu-link {
+                display: block;
+                padding: 1rem 1rem;
+
+                &:hover,
+                &:focus {
+                  background: $primary;
+                }
+              }
+            }
+
+            .dropdown-menu-item:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Burger Menu
+.burger-menu {
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  background: none;
+  z-index: 99;
+
+  span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: $primary;
+    margin: 5px 0;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  &.active {
+    span:first-child {
+      transform: translateY(3px) rotate(45deg);
+    }
+
+    span:last-child {
+      transform: translateY(-3px) rotate(-45deg);
+    }
+  }
+}
+
+// Menu Responsive
+.menu-responsive {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: $primary;
+  font-weight: 600;
+
+  .menu-responsive-links {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+
+    .menu-responsive-link-item {
+      border-bottom: 1px solid $black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .menu-responsive-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem 0;
+        text-align: center;
+
+        .arrow {
+          width: 15px;
+          height: 15px;
+          margin-left: 5px;
+          transition: all 0.2s ease-in-out;
+        }
+
+        &:hover {
+          .arrow {
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+
+    .menu-responsive-link-item:last-child {
+      border-bottom: none;
+    }
+  }
+}

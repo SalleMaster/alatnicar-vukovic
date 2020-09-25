@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+html {
+  font-size: 12px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #010101;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  transition: all 0.4s ease;
+}
+
+body a {
+  color: #010101;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.text-small {
+  font-size: 0.8rem;
+}
+
+.text-extra-small {
+  font-size: 0.64rem;
+}
+
+.font-primary {
+  font-family: 'Poppins', sans-serif;
+}
+
+.opacity-7 {
+  opacity: 0.7;
+}
+
+.opacity-5 {
+  opacity: 0.5;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 17px;
+  }
+  .container {
+    width: 1140px;
+  }
+}
+
+@media (min-width: 1600px) {
+  html {
+    font-size: 20px;
+  }
+  .container {
+    width: 1300px;
+  }
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  padding: 1rem 10%;
+  z-index: 1000;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-wrapper .nav-logo {
+  width: 120px;
+}
+
+.nav-wrapper .navigation {
+  display: none;
+  font-weight: 600;
+}
+
+.nav-wrapper .navigation .nav-up {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+.nav-wrapper .navigation .nav-up .up-link:nth-child(1) {
+  margin-right: 1rem;
+}
+
+.nav-wrapper .navigation .nav-up i {
+  color: #f1b604;
+}
+
+.nav-wrapper .navigation .nav-down .nav-list {
+  display: flex;
+}
+
+.nav-wrapper .navigation .nav-down .nav-list .link-item {
+  margin-right: 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-wrapper .navigation .nav-down .nav-list .link-item .arrow {
+  height: 10px;
+  margin-left: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-wrapper .navigation .nav-down .nav-list .link-item:hover:after, .nav-wrapper .navigation .nav-down .nav-list .link-item.active:after {
+  transform: scaleX(100%);
+}
+
+.nav-wrapper .navigation .nav-down .nav-list .link-item:hover .arrow, .nav-wrapper .navigation .nav-down .nav-list .link-item.active .arrow {
+  transform: rotate(90deg);
+}
+
+.nav-wrapper .navigation .nav-down .nav-list .link-item:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: #f1b604;
+  transform-origin: center;
+  transition: all 0.2s ease-in-out;
+  transform: scaleX(0);
+  z-index: 1;
+}
+
+.nav-wrapper .navigation .nav-down .nav-list .link-item:nth-child(7) {
+  margin-right: 0;
+}
+
+.nav-wrapper .navigation .nav-down .nav-list .dropdown {
+  position: relative;
+}
+
+.nav-wrapper .navigation .nav-down .nav-list .dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-wrapper .navigation .nav-down .nav-list .dropdown:hover .link-item:after {
+  transform: scaleX(100%);
+}
+
+.nav-wrapper .navigation .nav-down .nav-list .dropdown:hover .link-item .arrow {
+  transform: rotate(90deg);
+}
+
+.nav-wrapper .navigation .nav-down .nav-list .dropdown .dropdown-menu {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  top: 25px;
+  padding-top: 20px;
+  background: #ffffff;
+  min-width: 300px;
+  transform: translateX(-30%);
+  font-size: 0.8rem;
+  font-weight: 300;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.nav-wrapper .navigation .nav-down .nav-list .dropdown .dropdown-menu .dropdown-menu-item {
+  border-bottom: 1px solid #f1b604;
+}
+
+.nav-wrapper .navigation .nav-down .nav-list .dropdown .dropdown-menu .dropdown-menu-item .dropdown-menu-link {
+  display: block;
+  padding: 1rem 1rem;
+}
+
+.nav-wrapper .navigation .nav-down .nav-list .dropdown .dropdown-menu .dropdown-menu-item .dropdown-menu-link:hover, .nav-wrapper .navigation .nav-down .nav-list .dropdown .dropdown-menu .dropdown-menu-item .dropdown-menu-link:focus {
+  background: #f1b604;
+}
+
+.nav-wrapper .navigation .nav-down .nav-list .dropdown .dropdown-menu .dropdown-menu-item:last-child {
+  border-bottom: none;
+}
+
+.burger-menu {
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  background: none;
+  z-index: 99;
+}
+
+.burger-menu span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #f1b604;
+  margin: 5px 0;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.burger-menu.active span:first-child {
+  transform: translateY(3px) rotate(45deg);
+}
+
+.burger-menu.active span:last-child {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+.menu-responsive {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #f1b604;
+  font-weight: 600;
+}
+
+.menu-responsive .menu-responsive-links {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+
+.menu-responsive .menu-responsive-links .menu-responsive-link-item {
+  border-bottom: 1px solid #010101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-responsive .menu-responsive-links .menu-responsive-link-item .menu-responsive-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.menu-responsive .menu-responsive-links .menu-responsive-link-item .menu-responsive-link .arrow {
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-responsive .menu-responsive-links .menu-responsive-link-item .menu-responsive-link:hover .arrow {
+  transform: translateX(5px);
+}
+
+.menu-responsive .menu-responsive-links .menu-responsive-link-item:last-child {
+  border-bottom: none;
+}
