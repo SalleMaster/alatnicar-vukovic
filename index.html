@@ -14,6 +14,7 @@
   </head>
   <body>
     <nav class="nav">
+      <div class="nav-bg-overlay"></div>
       <!-- Main Nav -->
       <div class="nav-wrapper">
         <a href="#hero" class="nav-logo"
@@ -134,36 +135,132 @@
 
       <!-- Menu Responsive -->
       <div class="menu-responsive">
-        <ul class="menu-responsive-links">
-          <li class="menu-responsive-link-item">
-            <a href="" class="menu-responsive-link"> POČETNA</a>
-          </li>
-          <li class="menu-responsive-link-item">
-            <a href="" class="menu-responsive-link">O NAMA</a>
-          </li>
-          <li class="menu-responsive-link-item">
-            <a href="" class="menu-responsive-link">GALERIJA</a>
-          </li>
-          <li class="menu-responsive-link-item">
-            <a href="" class="menu-responsive-link">CNC MAŠINSKA OBRADA</a>
-          </li>
-          <li class="menu-responsive-link-item">
-            <a href="" class="menu-responsive-link">
-              <div>PROIZVODI</div>
-              <img class="arrow" src="./img/icons/arrow.svg" alt="arrow"
-            /></a>
-          </li>
-          <li class="menu-responsive-link-item">
-            <a href="" class="menu-responsive-link">
-              <div>USLUGE</div>
-              <img class="arrow" src="./img/icons/arrow.svg" alt="arrow"
-            /></a>
-          </li>
-          <li class="menu-responsive-link-item">
-            <a href="" class="menu-responsive-link">KONTAKT</a>
-          </li>
-        </ul>
+        <div class="menu-responsive-wrapper">
+          <ul class="menu-responsive-links">
+            <li class="menu-responsive-link-item">
+              <a href="" class="menu-responsive-link link"> POČETNA</a>
+            </li>
+            <li class="menu-responsive-link-item">
+              <a href="" class="menu-responsive-link link">O NAMA</a>
+            </li>
+            <li class="menu-responsive-link-item">
+              <a href="" class="menu-responsive-link link">GALERIJA</a>
+            </li>
+            <li class="menu-responsive-link-item">
+              <a href="" class="menu-responsive-link link"
+                >CNC MAŠINSKA OBRADA</a
+              >
+            </li>
+            <li class="menu-responsive-link-item proizvodi-toggle">
+              <div href="" class="menu-responsive-link">
+                <div>PROIZVODI</div>
+                <i class="arrow fas fa-angle-right"></i>
+              </div>
+            </li>
+            <li class="menu-responsive-link-item usluge-toggle">
+              <div href="" class="menu-responsive-link">
+                <div>USLUGE</div>
+                <i class="arrow fas fa-angle-right"></i>
+              </div>
+            </li>
+            <li class="menu-responsive-link-item">
+              <a href="" class="menu-responsive-link link">KONTAKT</a>
+            </li>
+          </ul>
+          <div class="menu-responsive-contact">
+            <a href="" class="phone link">
+              <i class="fas fa-phone"></i>
+              TELEFON
+            </a>
+            <a href="" class="email link">
+              <i class="fas fa-envelope"></i>
+              EMAIL
+            </a>
+          </div>
+
+          <!-- Proizvodi -->
+          <ul id="proizvodi-submenu" class="responsive-sub-menu">
+            <div class="sub-menu-wrapper">
+              <div class="back-button">
+                <i class="fas fa-arrow-left"></i> NAZAD
+              </div>
+              <ul class="sub-menu-links">
+                <li class="sub-menu-item">
+                  <a href="" class="sub-menu-link link">
+                    Alati za brizganje <br />
+                    I termoformiranje plastike
+                  </a>
+                </li>
+                <li class="sub-menu-item">
+                  <a href="" class="sub-menu-link link">
+                    PVC ukrasni paneli za vrata
+                  </a>
+                </li>
+                <li class="sub-menu-item">
+                  <a href="" class="sub-menu-link link">
+                    Automati za izradu <br />i montažu proizvoda velikih serija
+                  </a>
+                </li>
+                <li class="sub-menu-item">
+                  <a href="" class="sub-menu-link link">
+                    Procesna oprema sa CNC <br />ili mehaničkim upravljanjem
+                  </a>
+                </li>
+                <li class="sub-menu-item">
+                  <a href="" class="sub-menu-link link">
+                    Terapeutski alati za masažu <br />od medicinskog celika
+                  </a>
+                </li>
+                <li class="sub-menu-item">
+                  <a href="" class="sub-menu-link link">
+                    Brodići za prihranu ribe
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+
+          <!-- Usluge -->
+          <ul id="usluge-submenu" class="responsive-sub-menu">
+            <div class="sub-menu-wrapper">
+              <div class="back-button">
+                <i class="fas fa-arrow-left"></i> NAZAD
+              </div>
+              <ul class="sub-menu-links">
+                <li class="sub-menu-item">
+                  <a href="" class="sub-menu-link link">
+                    Izrada svih delova <br />proizvodnih mašina I opreme
+                  </a>
+                </li>
+                <li class="sub-menu-item">
+                  <a href="" class="sub-menu-link link">
+                    Remont I servis mašina <br />za štamparije
+                  </a>
+                </li>
+                <li class="sub-menu-item">
+                  <a href="" class="sub-menu-link link">
+                    Remont mašina za mlevenje mesa <br />i mesoreznica
+                  </a>
+                </li>
+                <li class="sub-menu-item">
+                  <a href="" class="sub-menu-link link">
+                    Oštrenje makaza, noževa <br />i svih vrsta mašinica za
+                    šišanje
+                  </a>
+                </li>
+                <li class="sub-menu-item">
+                  <a href="" class="sub-menu-link link">
+                    Bravarske usluge od INOX-a ili Čelika
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
       </div>
     </nav>
+
+    <!-- Scripts -->
+    <script src="./js/nav.js"></script>
   </body>
 </html>

@@ -138,14 +138,26 @@ p {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
+.nav .nav-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 1;
+}
+
 .nav-wrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
 }
 
 .nav-wrapper .nav-logo {
-  width: 120px;
+  width: 70px;
 }
 
 .nav-wrapper .navigation {
@@ -292,41 +304,104 @@ p {
   width: 100%;
   background: #f1b604;
   font-weight: 600;
+  font-size: 1.2rem;
+  transition: all 0.5s cubic-bezier(0.9, 0.12, 0.2, 1);
+  transform: translateY(-100%);
+  z-index: -1;
 }
 
-.menu-responsive .menu-responsive-links {
+.menu-responsive.active {
+  transform: translateY(0);
+}
+
+.menu-responsive .menu-responsive-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 99px);
+  justify-content: space-between;
+}
+
+.menu-responsive .menu-responsive-wrapper .menu-responsive-links {
   display: flex;
   flex-direction: column;
   padding: 2rem 0;
 }
 
-.menu-responsive .menu-responsive-links .menu-responsive-link-item {
-  border-bottom: 1px solid #010101;
+.menu-responsive .menu-responsive-wrapper .menu-responsive-links .menu-responsive-link-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.menu-responsive .menu-responsive-links .menu-responsive-link-item .menu-responsive-link {
+.menu-responsive .menu-responsive-wrapper .menu-responsive-links .menu-responsive-link-item .menu-responsive-link {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 1rem 0;
+  padding: 1.7rem 0;
   text-align: center;
 }
 
-.menu-responsive .menu-responsive-links .menu-responsive-link-item .menu-responsive-link .arrow {
-  width: 15px;
-  height: 15px;
+.menu-responsive .menu-responsive-wrapper .menu-responsive-links .menu-responsive-link-item .menu-responsive-link .arrow {
   margin-left: 5px;
   transition: all 0.2s ease-in-out;
 }
 
-.menu-responsive .menu-responsive-links .menu-responsive-link-item .menu-responsive-link:hover .arrow {
+.menu-responsive .menu-responsive-wrapper .menu-responsive-links .menu-responsive-link-item .menu-responsive-link:hover .arrow {
   transform: translateX(5px);
 }
 
-.menu-responsive .menu-responsive-links .menu-responsive-link-item:last-child {
+.menu-responsive .menu-responsive-wrapper .menu-responsive-links .menu-responsive-link-item:last-child {
   border-bottom: none;
+}
+
+.menu-responsive .menu-responsive-wrapper .menu-responsive-contact {
+  display: flex;
+}
+
+.menu-responsive .menu-responsive-wrapper .menu-responsive-contact a {
+  flex: 1;
+  padding: 30px;
+  text-align: center;
+  background: #fcc82c;
+  font-size: 1.2rem;
+}
+
+.menu-responsive .menu-responsive-wrapper .menu-responsive-contact .phone {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menu-responsive .menu-responsive-wrapper .responsive-sub-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f1b604;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.9, 0.12, 0.2, 1);
+  transform: translateX(100%);
+}
+
+.menu-responsive .menu-responsive-wrapper .responsive-sub-menu.active {
+  transform: translateX(0);
+}
+
+.menu-responsive .menu-responsive-wrapper .responsive-sub-menu .sub-menu-wrapper .back-button {
+  padding: 1rem 0;
+  background: #fcc82c;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.menu-responsive .menu-responsive-wrapper .responsive-sub-menu .sub-menu-wrapper .sub-menu-links .sub-menu-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menu-responsive .menu-responsive-wrapper .responsive-sub-menu .sub-menu-wrapper .sub-menu-links .sub-menu-item .sub-menu-link {
+  display: block;
+  padding: 1.7rem 0;
 }
