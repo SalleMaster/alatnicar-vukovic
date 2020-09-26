@@ -1,0 +1,49 @@
+// Hero
+.hero {
+  position: relative;
+  min-height: 80vh;
+  background: url('./img/background/hero-banner.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  align-items: center;
+
+  .dark-overlay {
+    z-index: 1;
+  }
+
+  .header-wrapper {
+    position: relative;
+    z-index: 2;
+
+    h1 {
+      color: $primary;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    h5 {
+      font-weight: 200;
+    }
+
+    .btn-wrapper {
+      margin-top: 1.5rem;
+
+      .btn:nth-child(1) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+// Responsive Media Queries
+@media (min-width: 768px) {
+  .hero {
+    .header-wrapper {
+      h1 {
+        font-size: 3.052rem;
+      }
+    }
+  }
+}

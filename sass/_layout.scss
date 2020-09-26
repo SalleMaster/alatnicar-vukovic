@@ -91,6 +91,10 @@ p {
   font-size: 0.64rem;
 }
 
+.text-white {
+  color: $white;
+}
+
 .font-primary {
   font-family: 'Poppins', sans-serif;
 }
@@ -109,6 +113,11 @@ p {
   margin: 0 auto;
 }
 
+// Navbar Margin
+.navbar-margin-top {
+  height: 99px;
+}
+
 // Responsive Media Queries
 @media (min-width: 576px) {
   .container {
@@ -124,11 +133,21 @@ p {
   .container {
     width: 720px;
   }
+
+  .navbar-margin-top {
+    height: 109px;
+  }
 }
 
 @media (min-width: 992px) {
   .container {
     width: 960px;
+  }
+}
+
+@media (min-width: 1140px) {
+  .navbar-margin-top {
+    height: 139px;
   }
 }
 
@@ -147,5 +166,9 @@ p {
   }
   .container {
     width: 1300px;
+  }
+
+  .navbar-margin-top {
+    height: 148px;
   }
 }

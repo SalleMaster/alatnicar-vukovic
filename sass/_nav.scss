@@ -170,7 +170,7 @@
 
   &.active {
     span:first-child {
-      transform: translateY(3px) rotate(45deg);
+      transform: translateY(5px) rotate(45deg);
     }
 
     span:last-child {
@@ -190,7 +190,7 @@
   font-weight: 600;
   font-size: 1.2rem;
   transition: all 0.5s cubic-bezier(0.9, 0.12, 0.2, 1);
-  transform: translateY(-100%);
+  transform: translateY(-120%);
   z-index: -1;
 
   &.active {
@@ -264,7 +264,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: $primary;
+      background: darken($color: $primary, $amount: 2%);
       text-align: center;
       transition: all 0.5s cubic-bezier(0.9, 0.12, 0.2, 1);
       transform: translateX(100%);
@@ -276,7 +276,7 @@
       .sub-menu-wrapper {
         .back-button {
           padding: 1rem 0;
-          background: lighten($color: $primary, $amount: 10%);
+          background: $primary;
           font-size: 1.3rem;
           cursor: pointer;
         }
@@ -293,5 +293,26 @@
         }
       }
     }
+  }
+}
+
+// Responsive Media Queries
+@media (min-width: 1125px) {
+  .nav-wrapper {
+    .navigation {
+      display: block;
+    }
+
+    .nav-logo {
+      width: 100px;
+    }
+  }
+
+  .menu-responsive {
+    display: none;
+  }
+
+  .burger-menu {
+    display: none;
   }
 }
