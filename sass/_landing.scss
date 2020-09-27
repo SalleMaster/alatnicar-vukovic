@@ -37,12 +37,330 @@
   }
 }
 
+// Proizvodi i Usluge
+.proizvodi-usluge-gallery {
+  padding: 5rem 0;
+
+  .container {
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+
+      .proizvodi-usluge-card {
+        text-align: center;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        .image-wrapper {
+          width: 100%;
+          height: 0;
+          padding: 50%;
+          position: relative;
+
+          .image-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+          }
+        }
+
+        .caption-wrapper {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 1rem;
+          z-index: 2;
+
+          .caption {
+            font-weight: 600;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            color: $primary;
+            transform: scale(0.8);
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+          }
+        }
+
+        .card-shadow {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 200%;
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0) 1%,
+            rgba(0, 0, 0, 0.7) 30%,
+            rgba(0, 0, 0, 0.7) 100%
+          );
+          opacity: 0.9;
+          z-index: 1;
+          transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        &:hover {
+          .image-wrapper {
+            .image-inner {
+              transform: scale(1.2);
+            }
+          }
+
+          .caption-wrapper {
+            .caption {
+              transform: scale(1);
+            }
+          }
+
+          .card-shadow {
+            transform: translateY(50%);
+          }
+        }
+      }
+
+      .proizvodi-usluge-card:nth-of-type(1) {
+        .image-wrapper {
+          .image-inner:nth-of-type(1) {
+            background: url('./img/proizvodi-usluge/masinska-obrada.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      }
+      .proizvodi-usluge-card:nth-of-type(2) {
+        .image-wrapper {
+          .image-inner:nth-of-type(1) {
+            background: url('./img/proizvodi-usluge/alat-za-slivnik.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      }
+      .proizvodi-usluge-card:nth-of-type(3) {
+        .image-wrapper {
+          .image-inner:nth-of-type(1) {
+            background: url('./img/proizvodi-usluge/pvc-paneli-vrata.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      }
+      .proizvodi-usluge-card:nth-of-type(4) {
+        .image-wrapper {
+          .image-inner:nth-of-type(1) {
+            background: url('./img/proizvodi-usluge/cnc-automat-za-zicane-delove.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      }
+      .proizvodi-usluge-card:nth-of-type(5) {
+        .image-wrapper {
+          .image-inner:nth-of-type(1) {
+            background: url('./img/proizvodi-usluge/cnc-automat-za-zicane-delove.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      }
+      .proizvodi-usluge-card:nth-of-type(6) {
+        .image-wrapper {
+          .image-inner:nth-of-type(1) {
+            background: url('./img/proizvodi-usluge/set-alata.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      }
+      .proizvodi-usluge-card:nth-of-type(7) {
+        .image-wrapper {
+          .image-inner:nth-of-type(1) {
+            background: url('./img/proizvodi-usluge/brodic.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      }
+      .proizvodi-usluge-card:nth-of-type(8) {
+        .image-wrapper {
+          .image-inner:nth-of-type(1) {
+            background: url('./img/proizvodi-usluge/metalni-delovi.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      }
+      .proizvodi-usluge-card:nth-of-type(9) {
+        .image-wrapper {
+          .image-inner:nth-of-type(1) {
+            background: url('./img/proizvodi-usluge/masina-za-stamparije.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      }
+      .proizvodi-usluge-card:nth-of-type(10) {
+        .image-wrapper {
+          .image-inner:nth-of-type(1) {
+            background: url('./img/proizvodi-usluge/mesoreznica.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      }
+      .proizvodi-usluge-card:nth-of-type(11) {
+        .image-wrapper {
+          .image-inner:nth-of-type(1) {
+            background: url('./img/proizvodi-usluge/ostrenje.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      }
+      .proizvodi-usluge-card:nth-of-type(12) {
+        .image-wrapper {
+          .image-inner:nth-of-type(1) {
+            background: url('./img/proizvodi-usluge/tocilica.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Saradnici
+.saradnici-section {
+  background: $light;
+
+  .container {
+    .saradnici-wrapper {
+      .saradnici-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+          margin: 0 1rem;
+          width: auto;
+          max-height: 50px;
+        }
+      }
+
+      .saradnici-flex:nth-of-type(1) {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+}
+
+// O Nama
+.o-nama-section {
+  .o-nama-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 5rem;
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p:nth-of-type(1),
+      p:nth-of-type(2) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5rem;
+
+      img {
+        width: 70%;
+      }
+    }
+  }
+}
+
 // Responsive Media Queries
 @media (min-width: 768px) {
   .hero {
     .header-wrapper {
       h1 {
         font-size: 3.052rem;
+      }
+    }
+  }
+
+  .proizvodi-usluge-gallery {
+    .container {
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem 2rem;
+      }
+    }
+  }
+
+  .o-nama-section {
+    .o-nama-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+
+      .logo {
+        justify-content: end;
+        margin-top: 0;
+
+        img {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .saradnici-section {
+    .container {
+      .saradnici-wrapper {
+        display: flex;
+        .saradnici-flex {
+          width: 50%;
+        }
+
+        .saradnici-flex:nth-of-type(1) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .proizvodi-usluge-gallery {
+    .container {
+      .gallery-grid {
+        gap: 6rem 4rem;
+        .proizvodi-usluge-card {
+          .caption-wrapper {
+            .caption {
+              font-size: 1.563rem;
+            }
+          }
+        }
       }
     }
   }

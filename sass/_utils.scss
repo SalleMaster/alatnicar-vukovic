@@ -98,8 +98,8 @@
 
 // Section
 .section {
-  margin: 5rem 0;
-  padding: 5rem 0;
+  // margin: 5rem 0;
+  padding: 10rem 0;
 
   .section-header {
     border-top: 7px solid $primary;
@@ -111,11 +111,15 @@
         display: inline-block;
 
         h2 {
+          position: relative;
           font-weight: 500;
+          z-index: 1;
         }
 
         h5 {
+          position: relative;
           margin-bottom: 1rem;
+          z-index: 1;
         }
 
         .section-header-bg {
@@ -128,7 +132,7 @@
           background-repeat: no-repeat;
           background-position: right;
           background-size: cover;
-          z-index: -1;
+          z-index: 0;
           transform: translateX(200px);
         }
       }
