@@ -296,6 +296,97 @@
   }
 }
 
+// Nas Tim
+.nas-tim-section {
+  background: $light;
+
+  .container {
+    .nas-tim-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10rem 3rem;
+      margin-top: 10rem;
+
+      .nas-tim-card {
+        padding: 2rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        text-align: center;
+        background: $white;
+
+        img {
+          width: 50%;
+          margin-top: -50%;
+          border-radius: 50%;
+        }
+
+        h4 {
+          color: $primary;
+          font-weight: 500;
+          line-height: 1.4;
+          margin-bottom: 0.7rem;
+        }
+
+        .text-small {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// Footer
+.footer {
+  background: $primary;
+  padding: 5rem 0;
+
+  .container {
+    .footer-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      .footer-box {
+        .box-header {
+          text-transform: uppercase;
+          margin-bottom: 1.5rem;
+          font-weight: 500;
+        }
+
+        .box-links {
+          .box-link-item {
+            margin-bottom: 1rem;
+
+            .box-link {
+              position: relative;
+
+              &:after {
+                content: '';
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: $black;
+                transition: all 0.3s ease-in-out;
+                transform-origin: left;
+                transform: scaleX(0);
+              }
+
+              &:hover {
+                &:after {
+                  transform: scaleX(1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 // Responsive Media Queries
 @media (min-width: 768px) {
   .hero {
@@ -330,6 +421,15 @@
       }
     }
   }
+
+  .footer {
+    .container {
+      .footer-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -344,6 +444,30 @@
         .saradnici-flex:nth-of-type(1) {
           margin-bottom: 0;
         }
+      }
+    }
+  }
+
+  .nas-tim-section {
+    .container {
+      .nas-tim-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0rem 3rem;
+
+        .nas-tim-card {
+          img {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    .container {
+      .footer-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
       }
     }
   }
