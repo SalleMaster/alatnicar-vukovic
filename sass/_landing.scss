@@ -340,6 +340,7 @@
 .footer {
   background: $primary;
   padding: 5rem 0;
+  position: relative;
 
   .container {
     .footer-wrapper {
@@ -384,6 +385,13 @@
         }
       }
     }
+  }
+
+  .signature {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

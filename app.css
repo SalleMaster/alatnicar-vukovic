@@ -876,6 +876,7 @@ p {
 .footer {
   background: #f1b604;
   padding: 5rem 0;
+  position: relative;
 }
 
 .footer .container .footer-wrapper {
@@ -913,6 +914,13 @@ p {
 
 .footer .container .footer-wrapper .footer-box .box-links .box-link-item .box-link:hover:after {
   transform: scaleX(1);
+}
+
+.footer .signature {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media (min-width: 768px) {
