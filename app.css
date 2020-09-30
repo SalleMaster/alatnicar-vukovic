@@ -567,14 +567,14 @@ p {
   position: absolute;
   top: 0;
   right: 0;
-  width: 300%;
+  width: 500%;
   height: 100%;
   background: url("./img/background/section-header-bg.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
   z-index: 0;
-  transform: translateX(200px);
+  transform: translateX(300px);
 }
 
 .section .section-header.section-header-right .container {
@@ -1011,4 +1011,50 @@ p {
   .proizvod-ili-usluga-section .container .proizvod-ili-usluga-wrapper .description p {
     margin-bottom: 2rem;
   }
+}
+
+.kontakt-section {
+  padding-top: 3rem;
+}
+
+.kontakt-section .container .kontakt-wrapper {
+  padding-top: 5rem;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box {
+  margin-bottom: 3rem;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box h3 {
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box h5 {
+  margin-bottom: 1rem;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box h5 .kontakt-link {
+  position: relative;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box h5 .kontakt-link:after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #010101;
+  transition: all 0.3s ease-in-out;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box h5 .kontakt-link:hover:after {
+  transform: scaleX(1);
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box:last-child {
+  margin-bottom: 0;
 }

@@ -1,0 +1,52 @@
+// Kontakt
+.kontakt-section {
+  padding-top: 3rem;
+
+  .container {
+    .kontakt-wrapper {
+      padding-top: 5rem;
+
+      .kontakt-boxes {
+        .kontakt-box {
+          margin-bottom: 3rem;
+
+          h3 {
+            margin-bottom: 1.2rem;
+            font-weight: 500;
+          }
+
+          h5 {
+            margin-bottom: 1rem;
+
+            .kontakt-link {
+              position: relative;
+
+              &:after {
+                content: '';
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: $black;
+                transition: all 0.3s ease-in-out;
+                transform-origin: left;
+                transform: scaleX(0);
+              }
+
+              &:hover {
+                &:after {
+                  transform: scaleX(1);
+                }
+              }
+            }
+          }
+        }
+
+        .kontakt-box:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
