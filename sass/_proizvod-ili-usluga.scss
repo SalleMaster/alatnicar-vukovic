@@ -1,0 +1,46 @@
+// Proizvod ili usluga
+.proizvod-ili-usluga-section {
+  padding-top: 3rem;
+
+  .container {
+    .proizvod-ili-usluga-wrapper {
+      margin-top: 5rem;
+
+      .image-wrapper {
+        margin-bottom: 3rem;
+      }
+
+      .description {
+        p {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
+
+// Responsive Media Queries
+@media (min-width: 768px) {
+  .proizvod-ili-usluga-section {
+    .container {
+      .proizvod-ili-usluga-wrapper {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 3rem;
+
+        .image-wrapper {
+          margin-bottom: 0;
+          display: flex;
+          align-items: center;
+        }
+
+        .description {
+          p {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
