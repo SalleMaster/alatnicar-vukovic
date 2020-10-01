@@ -354,90 +354,127 @@
         <div class="kontakt-wrapper">
           <div class="kontakt-boxes">
             <div class="kontakt-box">
-              <h3>Adresa</h3>
-              <h5>
+              <h4>Adresa</h4>
+              <p>
                 Srbija, Aranđelovac 34300 <br />
                 Marka Kraljevića 2
-              </h5>
+              </p>
             </div>
             <div class="kontakt-box">
-              <h3>Kancelarija</h3>
-              <h5>
+              <h4>Kancelarija</h4>
+              <p>
                 <a href="" class="kontakt-link"
                   ><i class="fas fa-phone"></i> +381 63 / 623 256</a
                 >
-              </h5>
-              <h5>
+              </p>
+              <p>
                 <a href="" class="kontakt-link"
                   ><i class="fas fa-envelope"></i> office@alatnicar.co.rs</a
                 >
-              </h5>
-              <h5>
+              </p>
+              <p>
                 <a href="" class="kontakt-link"
                   ><i class="fas fa-envelope"></i> info@alatnicar.co.rs</a
                 >
-              </h5>
+              </p>
             </div>
             <div class="kontakt-box">
-              <h3>Vlasnici</h3>
-              <h5>
+              <h4>Vlasnici</h4>
+              <p>
                 <a href="" class="kontakt-link"
                   ><i class="fas fa-mobile-alt"></i> +381 69 / 16 69 977 -
                   Srđan</a
                 >
-              </h5>
-              <h5>
+              </p>
+              <p>
                 <a href="" class="kontakt-link"
                   ><i class="fas fa-mobile-alt"></i> +381 65 / 59 77 040 -
                   Mlađan</a
                 >
-              </h5>
-              <h5>
+              </p>
+              <p>
                 <a href="" class="kontakt-link"
                   ><i class="fas fa-mobile-alt"></i> +381 60 / 56 60 006 -
                   Ivan</a
                 >
-              </h5>
+              </p>
             </div>
             <div class="kontakt-box">
-              <h3>Tehnička podrška i konsultant</h3>
-              <h5>
+              <h4>Tehnička podrška i konsultant</h4>
+              <p>
                 <a href="" class="kontakt-link"
                   ><i class="fas fa-mobile-alt"></i> +381 63 / 623 256 -
                   Dragoslav</a
                 >
-              </h5>
-              <h5>
+              </p>
+              <p>
                 <a href="" class="kontakt-link"
                   ><i class="fas fa-envelope"></i>
                   dragoslav.vukovic@alatnicar.co.rs</a
                 >
-              </h5>
+              </p>
             </div>
             <div class="kontakt-box">
-              <h3>Obrazac za identifikaciju</h3>
-              <h5>
+              <h4>Obrazac za identifikaciju</h4>
+              <p>
                 <a href="" class="kontakt-link"
                   ><i class="fas fa-file-download"></i> Download</a
                 >
-              </h5>
+              </p>
             </div>
           </div>
+          <!-- Kwes form -->
 
-          <div class="kontakt-form">
-            <form
-              class="kwes-form"
-              action="https://kwes.io/api/foreign/forms/d5qVbyeFHYSIYvYDQKzT"
-            >
-              <label for="name">Your Name</label>
-              <input type="text" name="name" rules="required|max:255" />
+          <form
+            class="kwes-form kontakt-form"
+            action="https://kwes.io/api/foreign/forms/yRSYpAHBTyxSwdKp2bOJ"
+          >
+            <div class="form-grid">
+              <h4 class="header">Pišite nam</h4>
+              <div class="form-control ime">
+                <label for="name"><h5>Ime i prezime</h5></label>
+                <input type="text" name="name" rules="required|max:255" />
+              </div>
+              <div class="form-control email">
+                <label for="email"><h5>Email</h5></label>
+                <input type="email" name="email" rules="required|email" />
+              </div>
+              <div class="form-control telefon">
+                <label for="telefon"><h5>Telefon</h5></label>
+                <input type="text" name="telefon" rules="required|numeric" />
+              </div>
+              <div class="form-control poruka">
+                <label for="poruka"><h5>Poruka</h5></label>
+                <textarea
+                  name="poruka"
+                  id="poruka"
+                  cols="30"
+                  rows="10"
+                  rules="required"
+                ></textarea>
+              </div>
+            </div>
 
-              <button type="submit">Submit</button>
-            </form>
-          </div>
+            <button type="submit" class="btn btn-primary">
+              <span>Pošalji</span>
+              <span>Pošalji</span>
+            </button>
+          </form>
         </div>
       </div>
     </section>
+
+    <!-- Google Map -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2855.432913990409!2d20.568023!3d44.30105!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x284ea2d2592aca26!2sAlatnicar!5e0!3m2!1sen!2sus!4v1601281631200!5m2!1sen!2sus"
+      width="100%"
+      height="500"
+      frameborder="0"
+      style="border: 0"
+      allowfullscreen=""
+      aria-hidden="false"
+      tabindex="0"
+    ></iframe>
 
     <!-- Footer -->
     <footer class="footer">

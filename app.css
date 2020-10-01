@@ -1015,30 +1015,34 @@ p {
 
 .kontakt-section {
   padding-top: 3rem;
+  background: #fafafa;
 }
 
 .kontakt-section .container .kontakt-wrapper {
   padding-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
 }
 
 .kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box {
   margin-bottom: 3rem;
 }
 
-.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box h3 {
+.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box h4 {
   margin-bottom: 1.2rem;
   font-weight: 500;
 }
 
-.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box h5 {
+.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box p {
   margin-bottom: 1rem;
 }
 
-.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box h5 .kontakt-link {
+.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box p .kontakt-link {
   position: relative;
 }
 
-.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box h5 .kontakt-link:after {
+.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box p .kontakt-link:after {
   content: '';
   position: absolute;
   bottom: -3px;
@@ -1051,10 +1055,79 @@ p {
   transform: scaleX(0);
 }
 
-.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box h5 .kontakt-link:hover:after {
+.kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box p .kontakt-link:hover:after {
   transform: scaleX(1);
 }
 
 .kontakt-section .container .kontakt-wrapper .kontakt-boxes .kontakt-box:last-child {
   margin-bottom: 0;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-form {
+  background: #ffffff;
+  padding: 3rem;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-form .form-grid {
+  display: grid;
+  grid-template-areas: 'header header' 'ime ime' 'email email' 'telefon telefon' 'poruka poruka';
+  gap: 1rem;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-form .form-grid .header {
+  grid-area: header;
+  font-weight: 500;
+  text-align: center;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-form .form-grid .ime {
+  grid-area: ime;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-form .form-grid .email {
+  grid-area: email;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-form .form-grid .telefon {
+  grid-area: telefon;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-form .form-grid .poruka {
+  grid-area: poruka;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-form .form-grid .form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-form .form-grid .form-control label {
+  margin-bottom: 0.5rem;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-form .form-grid .form-control input,
+.kontakt-section .container .kontakt-wrapper .kontakt-form .form-grid .form-control textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #f1b604;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-form .form-grid .form-control input:focus,
+.kontakt-section .container .kontakt-wrapper .kontakt-form .form-grid .form-control textarea:focus {
+  outline: 1px solid #f1b604;
+}
+
+.kontakt-section .container .kontakt-wrapper .kontakt-form button {
+  margin-top: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .kontakt-section .container .kontakt-wrapper {
+    padding-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
 }
