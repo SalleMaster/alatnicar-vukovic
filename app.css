@@ -1131,3 +1131,14 @@ p {
     gap: 2rem;
   }
 }
+
+.galerija-section {
+  padding-top: 3rem;
+}
+
+.galerija-section .container .my-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding-top: 5rem;
+}
