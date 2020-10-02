@@ -1137,8 +1137,43 @@ p {
 }
 
 .galerija-section .container .my-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
   padding-top: 5rem;
+  line-height: 0;
+  column-count: 2;
+  column-gap: 1rem;
+}
+
+.galerija-section .container .my-gallery figure {
+  margin-bottom: 1rem;
+}
+
+.galerija-video-section {
+  padding-top: 0;
+}
+
+.galerija-video-section .container .video-gallery-wrapper {
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+}
+
+.galerija-video-section .container .video-gallery-wrapper iframe {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .galerija-section .container .my-gallery {
+    column-count: 3;
+  }
+  .galerija-video-section .container .video-gallery-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .galerija-section .container .my-gallery {
+    column-count: 4;
+  }
 }
